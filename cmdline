@@ -1,0 +1,5 @@
+-Xmx2048m
+-Xms1024m
+-Dalde.android.heap_size.max=256m
+-Dalde.android.heap_size.alloc=127m
+-Dalde.android.version.api=29

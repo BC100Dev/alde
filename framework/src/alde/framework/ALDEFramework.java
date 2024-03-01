@@ -1,28 +1,44 @@
 package alde.framework;
 
-import net.bc100dev.commons.utils.io.FileUtil;
-
 import java.io.File;
-import java.io.IOException;
-import java.util.LinkedList;
-
-import static alde.commons.ALDEDefaults.getConfigDirectory;
 
 public class ALDEFramework {
 
-    protected ALDEFramework(File configDir, LinkedList<String> libs) {
+    private static ALDEFramework frameworkInstance;
+
+    private boolean daemon = false;
+
+    public ALDEFramework() {
+        if (frameworkInstance != null)
+            throw new RuntimeException("The ALDE Framework cannot be initialized multiple times");
+
+        updateFramework();
     }
 
-    public static ALDEFramework init() throws IOException {
-        File file = new File(getConfigDirectory().getAbsolutePath());
-        if (!FileUtil.exists(file.getAbsolutePath()))
-            FileUtil.createDirectory(file.getAbsolutePath());
+    private void updateFramework() {
+        ALDEFramework.frameworkInstance = this;
+    }
 
-        String sessionType = System.getenv("XDG_SESSION_TYPE");
-        if (sessionType != null) {
-        }
+    public void setDaemon(boolean daemon) {
+        this.daemon = daemon;
+        updateFramework();
+    }
 
-        return new ALDEFramework(file, new LinkedList<>());
+    public boolean isDaemon() {
+        return daemon;
+    }
+
+    public void runSystem(int sdkVersion) throws ALDEException {
+    }
+
+    public void runPackage(String _package) throws ALDEException {
+    }
+
+    public void runPackage(File apkPackage) throws ALDEException {
+    }
+
+    public static ALDEFramework getFrameworkInstance() {
+        return frameworkInstance;
     }
 
 }
