@@ -8,6 +8,20 @@ actual Android system. I will make that possibility that includes using the defa
 System image, which will do its jobs. No emulators / VMs involved, but within a
 Window that will run a full Android system. Something that `wine` does its job at.
 
+## Dead project (Public Archive)
+Since this project hasn't really been updated, and motivation for this project
+is gone, I have decided to archive this repository publicly too. Mainly because
+I don't want to remove something that could have been something huge, but in
+general, I also have other project, and this project has given me the idea that
+nothing is impossible, and writing things like
+[K8s-CRCUTI](https://github.com/BC100Dev/K8s-CRCUTI) (KVL - Kubernetes Virtualization
+Layer) and now an upcoming project, pushing ideas beyond my skill set is how I
+can expand my coding skills.
+
+Therefore, I am archiving it for a better project. Trust me, I won't disappoint with
+the successor that I am thinking. If you want a hint on what this project could be,
+think of merging AOSP and Linux Desktop Environments together.
+
 ## Expected requirements
 Now, I am not sure with the requirements, but these are my speculations on what the
 requirements could be that the systems (mainly from the Android sources) say:
@@ -22,5 +36,3 @@ Recommended specifications might be:
   system)
 - AMD Ryzen 7 5700G CPU or equivalent
 - 4.5 GB of Storage space (NVMe)
-
-Longer description coming soon
